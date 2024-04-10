@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'GlenAPP',
+    'rest_framework',
+    'django_filters',
 ]
 
 MIDDLEWARE = [
@@ -78,6 +80,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
+        'USER':'root',
+        'PASSWORD':'Wb19970417',
+        'HOST':'127.0.0.1',
+        'PORT':'3306',
     }
 }
 
