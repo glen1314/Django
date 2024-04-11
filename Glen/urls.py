@@ -16,8 +16,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
+from django.urls import re_path as url
+from django.contrib import admin
+from GlenAPP.views import home
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('hello/',home),
     path('api/v1/', include('GlenAPP.urls')),
+    # url(r'^$',views.home,name='home'),
+    url(r'^admin/',admin.site.urls),
 ]
