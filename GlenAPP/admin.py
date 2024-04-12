@@ -19,7 +19,7 @@ class SubjectModelAdmin(admin.ModelAdmin):
     ordering = ('no',)
 
 class TeacherModelAdmin(admin.ModelAdmin):
-    list_display = ('no', 'name', 'sex', 'birth', 'good_count', 'bad_count', 'subject')
+    list_display = ('no', 'name', 'sex', 'birth', 'good_count', 'bad_count', 'subject','photo')
     search_fields = ('name', )
     ordering = ('no', )
 
