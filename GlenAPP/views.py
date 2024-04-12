@@ -16,6 +16,9 @@ class UserInfoViewSet(ModelViewSet):
     filter_fields = ['username',]
     search_fields = ('username',)
 
+def index(request):
+    return HttpResponse("Hello,world.You are at the polls index Glen")
+
 def home(request):
     fruits = [
         'Apple', 'Orange', 'Pitaya', 'Durian', 'Waxberry', 'Blueberry',

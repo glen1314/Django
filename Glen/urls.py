@@ -23,7 +23,7 @@ from GlenAPP.views import home
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('hello/',home),
-    path('api/v1/', include('GlenAPP.urls')),
+    path('GlenAPP/', include('GlenAPP.urls')),
     # url(r'^$',views.home,name='home'),
     url(r'^admin/',admin.site.urls),
 ]

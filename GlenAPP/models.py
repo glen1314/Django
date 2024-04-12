@@ -36,3 +36,18 @@ class Teacher(models.Model):
     class Meta:
         managed = False
         db_table = 'tb_teacher'
+
+
+class Question(models.Model):
+    question_text = models.CharField(max_length=200,verbose_name="问题内容")
+    pub_date = models.DateField(verbose_name="发布日期")
+
+    class Meta:
+        managed = False
+        db_table = 'glenapp_question'
+
+class Choice(models.Model):
+    question = models.ForeignKey(Question,on_delete=models.CASCADE)
+    choice_text = models.CharField(max_length=200)
+    votes = models.IntegerField(default=0)
+

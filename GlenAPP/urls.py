@@ -12,6 +12,7 @@ router.register('UserInfo', UserInfoViewSet, basename='UserInfo')
 urlpatterns = [
     # url(r'^$',views.home,name='home'),
     # url(r'^admin/',admin.site.urls),
+    path("",views.index,name="index")
 ]
 
 urlpatterns += [

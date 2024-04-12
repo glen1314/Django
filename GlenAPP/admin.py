@@ -3,7 +3,7 @@ from django.contrib import admin
 # Register your models here.
 
 from django.contrib import admin
-from GlenAPP.models import UserInfo,Subject,Teacher
+from GlenAPP.models import UserInfo,Subject,Teacher,Question,Choice
 
 admin.site.site_header = '任务管理系统'
 
@@ -23,8 +23,15 @@ class TeacherModelAdmin(admin.ModelAdmin):
     search_fields = ('name', )
     ordering = ('no', )
 
+class GlenQuestion(admin.ModelAdmin):
+    list_display = ('question_text','pub_date')
+    search_fields=('question_text',)
+
+
 
 admin.site.register(UserInfo, UserInfoAdmin)
 admin.site.register(Subject,SubjectModelAdmin)
 admin.site.register(Teacher,TeacherModelAdmin)
+admin.site.register(Question,GlenQuestion)
+
 
