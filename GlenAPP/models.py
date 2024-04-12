@@ -21,6 +21,8 @@ class Subject(models.Model):
     class Meta:
         managed = False
         db_table = 'tb_subject'
+        verbose_name='科目'
+        verbose_name_plural = '科目'
 
 class Teacher(models.Model):
     no = models.AutoField(primary_key=True,verbose_name='编号')
@@ -36,6 +38,8 @@ class Teacher(models.Model):
     class Meta:
         managed = False
         db_table = 'tb_teacher'
+        verbose_name='老师'
+        verbose_name_plural = '老师'
 
 
 class Question(models.Model):
@@ -45,6 +49,8 @@ class Question(models.Model):
     class Meta:
         managed = False
         db_table = 'glenapp_question'
+        verbose_name = "问题"
+        verbose_name_plural = "问题"
 
 class Choice(models.Model):
     question = models.ForeignKey(Question,on_delete=models.CASCADE)
