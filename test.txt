@@ -1,0 +1,4 @@
+激活虚拟环境：.\myenv\Scripts\activate
+
+进入创建的项目文件夹下，执行  python manage.py runserver
+
