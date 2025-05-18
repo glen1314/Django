@@ -24,6 +24,5 @@ from goods import  views
 urlpatterns = [
     path("admin/", admin.site.urls),
     path('', RedirectView.as_view(url='/admin/')),
-    path('index/',views.index,name='index')
-
+    path('index/',views.index,name='index'),
 ]
